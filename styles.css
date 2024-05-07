@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height : 100vh;
+    overflow-x: hidden;
+    overflow-y:auto;
+    perspective: 10px;/*to open 3D effect*/
+    
+}
+.container{
+    position: relative;/* for absolute position*/
+    height : 100%;
+    display: flex;/*to place text at the center*/
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.background{
+    transform: translateZ(-40px) scale(5);
+}
+.men{
+    transform:translateZ(-20px) scale(3);
+}
+.background,.men{
+    position: absolute;/* for overlapping the images*/
+    height: 100%;/*height and width relative to their parent*/
+    width:100%;
+    object-fit: cover;/* to stretch the images*/
+    z-index: -1;/* for deciding the order of layered images*/
+}
+h1{
+   position: absolute; 
+   top : 5rem;
+   font-size: 10rem;
+   letter-spacing: 4px;
+   color:white;
+   text-shadow: 0 0 10px rgba(0,0,0,0.3);/* to give the shadow to the text*/
+}
+section{
+    background-color: rgb(45,45,45);
+    color:white;
+    padding : 5rem 0;
+}
+.secHeading{
+    font-size:5rem;
+    padding: 0 10rem;
+}
+.Text{
+    font-size:1.5rem;
+    padding: 0 10rem; 
+    margin: 5rem 0;
+}
+.bg{
+   position:relative;
+   width:100%;
+   background-attachment:fixed;/* fixed;to sroll the images on the background and background will be fixed*/
+   height : 500px;
+   background-position: center;
+   background-size: cover;/* to cover the image on the viewport*/
+}
+.desc{
+    position:absolute;
+    background-color: white;
+    padding: 0.5rem,2.5rem;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    color:black;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.bg1{
+    background-image: url(./assets/biking.png);
+}
+.bg2{
+    background-image: url(./assets/paragliding.png);
+}
+.bg3{
+    background-image: url(./assets/sur.jpg);
+}
